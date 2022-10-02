@@ -77,7 +77,7 @@ function getans(matches) {
     npara = resp3.length;
     para = resp3[resp3.length - 1];
     line = Math.trunc((pos - page * 3000 - totalletterinprevparas) / 90) + 1;
-    npos = para.length - (line - 1) * 90;
+    npos = para.length % 90;
     ans += `\nPage No. : ${
       page + 1
     } \n Para No. : ${npara} \n Line No. : ${line}\n Position No. : ${npos}\n`;

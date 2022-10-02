@@ -41,7 +41,7 @@
                 npara = resp3.length;
                 para = resp3[resp3.length - 1];
                 line = Math.trunc((pos - page * 3000 - totalletterinprevparas) / 90) + 1;
-                npos = para.length - (line - 1) * 90;
+                npos = para.length % 90;
                 ans += `Page No. : ${page + 1
                   } Para No. : ${npara} Line No. : ${line} Position No. : ${npos}<br/>`;
               });
@@ -59,39 +59,39 @@
             $(".res5").html(ans5);
           }
         })
+        $('.hide').css('display', 'block');
       });
     });
   </script>
 </head>
 
 <body>
-  <h1 class="title">Regex Parser</h1>
+  <h1 class="title">CSE 3002 Regex Fetcher</h1>
   <div class="get-text-container">
-    <h3 class="sub-title">Contents of the Text File</h3>
+    <h3 class="sub-title">Contents of the Sample Text File</h3>
     <button class="btn">Get</button>
     <script src="script.js"></script>
   </div>
   <div class="get-res">
-    <p class="p-res">This is some random text, please click 'Get' to get your simple.txt file. Lorem ipsum dolor sit
-      amet, consectetur adipisicing elit. Quam iusto doloremque impedit fugiat, labore qui possimus, ut quisquam sequi
-      officia earum enim voluptatum libero deleniti.</p>
+    <p class="p-res">Click on GET to execute and check the sample file.</p>
   </div>
-  <div class="get-res ">
-    <p class="res1"></p>
+  <div class="hide">
+    <div class="get-res ">
+      <p class="res1"></p>
+    </div>
+    <div class="get-res">
+      <p class="res2"></p>
+    </div>
+    <div class="get-res">
+      <p class="res3"></p>
+    </div>
+    <div class="get-res">
+      <p class="res4"></p>
+    </div>
+    <div class="get-res">
+      <p class="res5"></p>
+    </div>
   </div>
-  <div class="get-res">
-    <p class="res2"></p>
-  </div>
-  <div class="get-res">
-    <p class="res3"></p>
-  </div>
-  <div class="get-res">
-    <p class="res4"></p>
-  </div>
-  <div class="get-res">
-    <p class="res5"></p>
-  </div>
-
   </div>
 </body>
 
