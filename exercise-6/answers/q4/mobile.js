@@ -1,10 +1,10 @@
-const samsung = [
+const poco = [
   {
-    name: 'POCO X3',
-    model: 'surya',
+    name: 'Poco',
+    model: 'F1',
     color: 'Black',
-    mobileScreen: '6.5 inches',
-    camera: '64MP',
+    mobileScreen: '6 inches',
+    camera: '20MP',
     display_screen_features: function () {
       return this.mobileScreen;
     },
@@ -13,8 +13,8 @@ const samsung = [
     },
   },
   {
-    name: 'Samsung',
-    model: 'M22',
+    name: 'Poco',
+    model: 'F1',
     color: 'Red',
     mobileScreen: '6.5 inches',
     camera: '25MP',
@@ -26,8 +26,8 @@ const samsung = [
     },
   },
   {
-    name: 'Samsung',
-    model: 'M23',
+    name: 'Poco',
+    model: 'X2',
     color: 'White',
     mobileScreen: '7 inches',
     camera: '30MP',
