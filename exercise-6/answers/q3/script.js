@@ -1,9 +1,9 @@
 const samsung = {
-  name: "Samsung",
-  model: "M21",
-  color: "Black",
-  mobileScreen: "6 inches",
-  camera: "20MP",
+  name: 'POCO X3',
+  model: 'surya',
+  color: 'Black',
+  mobileScreen: '6.25 inches',
+  camera: '64MP',
   display_screen_features: function () {
     console.log(this.mobileScreen);
   },
@@ -11,17 +11,18 @@ const samsung = {
     console.log(this.camera);
   },
 };
+display_camera_featu;
 
 const redmi = {
-  name: "Redmi",
-  model: "XMI",
-  color: "Blue",
-  mobileScreen: "7 inches",
-  camera: "30MP",
+  name: 'Redmi',
+  model: 'MIX',
+  color: 'Blue',
+  mobileScreen: '7 inches',
+  camera: '30MP',
   display_screen_features: function () {
     console.log(this.mobileScreen);
   },
-  display_camera_features: function () {
+  res: function () {
     console.log(this.camera);
   },
 };
