@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 2</title>
+  <style>
+  </style>
+</head>
+<body>
+
+  <div class="timer">
+    <h3>
+      Displaying the current time with seconds
+    </h3>
+    <div class="timer-res">
+
+    </div>
+  </div>
+  
+  <div class="last-mod">
+    <h3>
+      Last Modified Date
+    </h3>
+    <div class="last-mod-res">
+    </div>
+  </div>
+
+  <div class="check-empty">
+    <h3>
+      Check Empty 
+    </h3>
+    String: <input type="text" name="" id="ipt-tag"> <button onclick="checkEmpty()">Check</button>
+    <div class="check-empty-res">
+
+    </div>
+  </div>
+
+  <script>
+    // prompting the user for their name
+    let username = prompt("Please enter your name");
+    // welcoming the user by alert
+    alert(`Welcome ${username}!`);
+    // Displaying the current time with seconds
+    const getTime = () => {
+      let date = new Date();
+      let hour = date.getHours();
+      let min = date.getMinutes();
+      let sec = date.getSeconds();
+      document.getElementsByClassName("timer-res")[0].innerText = `${hour} : ${min} : ${sec}`
+      setTimeout(getTime, 1000);
+    }
+    getTime();
+    // displaying the last modified date
+    document.getElementsByClassName("last-mod-res")[0].innerText = document.lastModified
+    // checking whether the input string is empty or not
+    const checkEmpty = () => {
+      document.getElementsByClassName("check-empty-res")[0].innerText = (document.getElementById("ipt-tag").value.length === 0)? "String is empty" : "String is not empty";
+    }
+  </script>
+</body>
+</html>

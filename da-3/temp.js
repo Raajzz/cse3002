@@ -124,7 +124,7 @@ let matches4 = [...resp.matchAll(regexp4)];
 let matches5 = [...resp.matchAll(regexp5)];
 let pg, para, line, pos, npos, npara;
 let ans = "";
-let fans;
+let fans = [];
 matches1.forEach((match) => {
   pos = match.index;
   page = Math.trunc(pos / 3000);
@@ -139,7 +139,7 @@ matches1.forEach((match) => {
   line = Math.trunc((pos - page * 3000 - totalletterinprevparas) / 90) + 1;
   npos = para.length - (line - 1) * 90;
   ans += `${para.length}\n${totalletterinprevparas}\nPage No. : ${page} \n Para No. : ${npara} \n Line No. : ${line}\n Position No. : ${npos}\n`;
-  //   fans["word_"] = ans;
+  
 });
 // matches2.forEach((match) => {
 //   pos = match.index;
