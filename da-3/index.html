@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+      $(document).ready(() => {
+        $(".btn").click(() => {
+          $.ajax({
+            url: "sample.txt", 
+            success: function(resp){
+              $(".p-res").html(resp);
+                let regexp1 = /[a-z]+\_/g;
+let regexp2 = /^ab+/g;
+let regexp3 = /^[A-Z][a-z0-9]+/g;
+let regexp4 = /[0-9]{2}(BCE|BDS|BKT|BIT|BBS|BCT|BCI|BCB)[0-9]{4}/g;
+let regexp5 = /\+[9][1][0-9]{10}bar/g;
+
+let matches1 = [...resp.matchAll(regexp1)];
+let matches2 = [...resp.matchAll(regexp2)];
+let matches3 = [...resp.matchAll(regexp3)];
+let matches4 = [...resp.matchAll(regexp4)];
+let matches5 = [...resp.matchAll(regexp5)];
+let pg, para, line, pos, npos, npara;
+let ans = "";
+let fans;
+matches1.forEach((match) => {
+  pos = match.index;
+  page = Number(pos / 3000);
+  let i = pos;
+  while (resp[i] != "\n" || i != 0) {
+    i--;
+  }
+  para = i;
+  let c = 0;
+  while (i != page * 3000) {
+    i--;
+    if (i == "\n") c++;
+  }
+  npara = c;
+
+  line = Number((pos - para) / 90);
+  npos = pos - line * 90;
+  ans = `Page No. : ${page} \n Para No. : ${npara} \n Position No. : ${npos}`;
+  fans.word_ = ans;
+});
+matches2.forEach((match) => {
+  pos = match.index;
+  page = Number(pos / 3000);
+  let i = pos;
+  while (resp[i] != "\n" || i != 0) {
+    i--;
+  }
+  para = i;
+  let c = 0;
+  while (i != page * 3000) {
+    i--;
+    if (i == "\n") c++;
+  }
+  npara = c;
+
+  line = Number((pos - para) / 90);
+  npos = pos - line * 90;
+  ans = `Page No. : ${page} \n Para No. : ${npara} \n Position No. : ${npos}`;
+  fans.word_ = ans;
+});
+matches3.forEach((match) => {
+  pos = match.index;
+  page = Number(pos / 3000);
+  let i = pos;
+  while (resp[i] != "\n" || i != 0) {
+    i--;
+  }
+  para = i;
+  let c = 0;
+  while (i != page * 3000) {
+    i--;
+    if (i == "\n") c++;
+  }
+  npara = c;
+
+  line = Number((pos - para) / 90);
+  npos = pos - line * 90;
+  ans = `Page No. : ${page} \n Para No. : ${npara} \n Position No. : ${npos}`;
+  fans.word_ = ans;
+});
+matches4.forEach((match) => {
+  pos = match.index;
+  page = Number(pos / 3000);
+  let i = pos;
+  while (resp[i] != "\n" || i != 0) {
+    i--;
+  }
+  para = i;
+  let c = 0;
+  while (i != page * 3000) {
+    i--;
+    if (i == "\n") c++;
+  }
+  npara = c;
+
+  line = Number((pos - para) / 90);
+  npos = pos - line * 90;
+  ans = `Page No. : ${page} \n Para No. : ${npara} \n Position No. : ${npos}`;
+  fans.word_ = ans;
+});
+matches5.forEach((match) => {
+  pos = match.index;
+  page = Number(pos / 3000);
+  let i = pos;
+  while (resp[i] != "\n" || i != 0) {
+    i--;
+  }
+  para = i;
+  let c = 0;
+  while (i != page * 3000) {
+    i--;
+    if (i == "\n") c++;
+  }
+  npara = c;
+
+  line = Number((pos - para) / 90);
+  npos = pos - line * 90;
+  ans = `Page No. : ${page} \n Para No. : ${npara} \n Position No. : ${npos}`;
+  fans.word_ = ans;
+});
+console.log(fans);
+
+
+
+
+
+
+
+
+
+
+
+            }
+          })
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 class="title">Regex Parser</h1>
+    <div class="get-text-container">
+      <h3 class="sub-title">Contents of the Text File</h3>
+      <button class="btn">Get?!</button>
+      <script src="script.js"></script>
+    </div>
+    <div class="get-res">
+      <p class="p-res">This is some random text, please click 'Get' to get your simple.txt file. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam iusto doloremque impedit fugiat, labore qui possimus, ut quisquam sequi officia earum enim voluptatum libero deleniti.</p>
+      </div>
+    <div class="get-res">
+
+    </div>
+    </body>
+</html>
