@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Teko', sans-serif;
-  background-color: #5CDB95;
-  padding: 0 100px
+  background-color: #5cdb95;
+  padding: 0 100px;
 }
 
-.title{
-  color: #05386B;
+.title {
+  color: #05386b;
   text-align: center;
   font-size: 100px;
   letter-spacing: 3px;
 }
 
-.sub-title{
-  color: #05386B;
+.sub-title {
+  color: #05386b;
   font-size: 30px;
 }
 
-.btn{
-  background-color: #05386B;
+.btn {
+  background-color: #05386b;
   border-radius: 10px;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
@@ -37,16 +37,16 @@ body{
   font-family: 'Teko', sans-serif;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #27ac91;
 }
 
-.get-text-container{
+.get-text-container {
   display: flex;
   justify-content: space-evenly;
 }
 
-.get-res{
+.get-res {
   color: white;
   line-height: 1.6;
   font-size: 18px;
@@ -55,5 +55,4 @@ body{
   padding: 10px 20px;
   margin: 30px;
   font-family: 'Times New Roman', Times, serif;
-  text-indent: 50px;
 }

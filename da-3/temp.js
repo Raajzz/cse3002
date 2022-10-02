@@ -1,4 +1,4 @@
-let resp = `abficia corporis porro iusto excepturi ea consequatur odio nihil iure dolores doloribus vitae ullam, eaque amet impedit! Odio deserunt dolore saepe voluptatem at facilis ea.
+let resp = `Awwficia9 corporis porro iusto excepturi ea consequatur odio nihil iure dolores doloribus vitae ullam, eaque amet impedit! Odio deserunt dolore saepe voluptatem at facilis ea.
 Iste praesentium impedit modi vel nostrum possimus pariatur distinctio ut eveniet! Veniam, vitae veritatis? Beatae iure expedita libero laboriosam aliquid unde dicta, dolore nam cupiditate quod eos ex esse perferendis.
 Ullam, dignissimos mollitia perspiciatis sed consequatur illum officiis dolor sunt excepturi fugiat tempore nobis unde. Reprehenderit, eius, eaque autem quis a obcaecati voluptate nisi officiis eligendi dolor aperiam quas veritatis.
 Neque corrupti vitae, iusto autem est quis voluptatibus vero quaerat architecto sapiente alias vel optio placeat fuga nihil ullam, sint pariatur inventore perspiciatis tempora! Deleniti eveniet iste odio vel ipsa.
@@ -52,10 +52,10 @@ xime architecto iste a modi aliquid vel inventore fugit ratione mollitia laborio
 Debitis odit consequatur consequuntur velit qui saepe facere, quibusdam in aperiam sequi nulla, obcaecati impedit quos, veniam illo iste! Nostrum neque aut odit minus laborum nesciunt consequuntur autem? Non, facere?
 Explicabo accusantium reprehenderit accusamus, sed recusandae mollitia voluptas quas excepturi itaque consequatur alias facere amet corrupti earum. Minima ducimus labore velit, dolores beatae ab explicabo ipsa ratione ea facilis unde!`;
 let regexp1 = /[a-z]+\_/g;
-let regexp2 = /^ab+/g;
-let regexp3 = /^[A-Z][a-z0-9]+/g;
-let regexp4 = /[0-9]{2}(BCE|BDS|BKT|BIT|BBS|BCT|BCI|BCB)[0-9]{4}/g;
-let regexp5 = /\+[9][1][0-9]{10}bar/g;
+let regexp2 = /\bab+/g;
+let regexp3 = /\b[A-Z][a-z0-9]+/g;
+let regexp4 = /\b[0-9]{2}(BCE|BDS|BKT|BIT|BBS|BCT|BCI|BCB)[0-9]{4}/g;
+let regexp5 = /\+[9][1][0-9]{10}/g;
 
 let matches1 = [...resp.matchAll(regexp1)];
 let matches2 = [...resp.matchAll(regexp2)];
@@ -67,7 +67,6 @@ function getans(matches) {
   let ans = '';
   matches.forEach((match) => {
     pos = match.index;
-    console.log(pos);
     page = Math.trunc(pos / 3000);
     let resp2 = resp.substring(page * 3000, pos);
     let resp3 = resp2.split(/\r?\n|\r|\n/g);
